@@ -1,0 +1,26 @@
+public class PatternPrinter {
+
+    public void printPattern(int rows){
+
+        for(int i = 0; i < rows; i++){
+            int printValue = rows;
+            boolean decrease = false;
+            for(int j = 0; j < rows; j++){
+                if(((i==j) && (i!=0 && j!=0)) || (decrease == true)){
+                    System.out.print(--printValue + " ");
+                    decrease = true;
+                } else {
+                    System.out.print(printValue + " ");
+                }
+
+            }
+            System.out.println("");
+        }
+
+    }
+
+    public static void main(String args[]){
+        PatternPrinter h = new PatternPrinter();
+        h.printPattern(5);
+    }
+}
